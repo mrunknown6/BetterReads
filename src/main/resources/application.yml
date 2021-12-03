@@ -1,0 +1,34 @@
+openlibrary:
+  cover-image:
+    base: http://covers.openlibrary.org/b/id/
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: <clientId>
+            client-secret: <clientSecter>
+  data:
+    cassandra:
+      keyspace-name: main
+      username: <username>
+      password: <password>
+      schema-action: create_if_not_exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+  application:
+    name: better-reads
+
+datastax.astra:
+  secure-connect-bundle: <pathToBundle>
+astra.db:
+  id: <id>
+  region: <region>
+  keyspace: <keyspace>
+  application.token: <token>
+
